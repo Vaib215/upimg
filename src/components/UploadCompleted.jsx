@@ -14,9 +14,9 @@ const UploadCompleted = ({id}) => {
     <div className="prev-wrapper">
       <h2>Uploaded Successfully!</h2>
       <img className="check" src="https://img.icons8.com/external-phatplus-solid-phatplus/64/219653/external-check-essential-phatplus-solid-phatplus.png" alt="completed"/>
-      <img className="prev-img" src={`https://image-uploader-backend.vaib215.repl.co${id}`} alt={`preview-${id}`}/>
+      <img className="prev-img" src={`https://localhost:3061${id}`} alt={`preview-${id}`}/>
       <div className="link-wrapper">
-        <a href={`https://image-uploader-backend.vaib215.repl.co${id}`}><input type="text" value={`https://image-uploader-backend.vaib215.repl.co/${id}`} disabled/></a>
+        <a href={`https://localhost:3061${id}`}><input type="text" value={`https://localhost:3061/${id}`} disabled/></a>
         <button onClick={handleCopy}>Copy Link</button>
       </div>
       <div className={`message ${message}`}>Link copied to clipboard</div>

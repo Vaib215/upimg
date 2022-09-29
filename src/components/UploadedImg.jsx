@@ -7,11 +7,11 @@ const UploadedImg = () => {
   const nav = useNavigate();
   const navigateToDown = (e) => {
     e.preventDefault()
-    window.location.href = `https://image-uploader-backend.vaib215.repl.co/${id}`
+    window.location.href = `https://localhost:3061/${id}`
   }
   return (
     <form className="container">
-      <img class="prev-img" src={`https://image-uploader-backend.vaib215.repl.co/${id}`} alt={`preview-${id}`}/>
+      <img class="prev-img" src={`https://localhost:3061/${id}`} alt={`preview-${id}`}/>
       <button onClick={navigateToDown}>Download</button>
       <button onClick={()=>nav('/')}>Upload another image</button>
     </form>

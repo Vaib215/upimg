@@ -15,7 +15,7 @@ const FileUploaderBox = () => {
     setUploading(false);
     let formData = new FormData()
     formData.append("file", file)
-    const resp = await axios.post('https://image-uploader-backend.vaib215.repl.co',formData, {
+    const resp = await axios.post('https://localhost:3061',formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

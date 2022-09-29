@@ -20,7 +20,7 @@ app.post('/', upload.single("file") , async(req,res)=>{
     originalName: req.file.originalname
   }
   const file = await File.create(fileData)
-  res.json(`https://image-uploader-backend.vaib215.repl.co/${file.id}`)
+  res.json(`https://localhost:3061/${file.id}`)
 })
 
 app.get("/:id",async(req,res)=>{
@@ -29,6 +29,6 @@ app.get("/:id",async(req,res)=>{
   res.download(file.path, file.originalName)
 })
 
-app.listen(3000, ()=> {
+app.listen(3061, ()=> {
   console.log("Server Started")
 })
