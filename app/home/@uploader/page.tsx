@@ -21,7 +21,7 @@ import { toast } from "sonner";
 const DRAG_STATE = {
   DRAG_OVER: "Drop your files here!",
   DROP: "Looks good!",
-  NOT_UPLOADING: `Drop your files here or Click to upload`,
+  NOT_UPLOADING: "Drop your files here or Click to upload",
 };
 
 export default function UploadPage() {
