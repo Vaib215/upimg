@@ -24,9 +24,11 @@ export const upload = async (image: Image) => {
   }
 };
 
-export const getImages = async (identifier: string, page = 0) => {
+export const getImages = async (identifier: string) => {
   try {
-    const images = await pb.collection("images").getList(page, 9, { owner: identifier });
+    const images = await pb.collection("images").getFullList({
+      filter: `owner = "${identifier}"`
+    });
     return {
       success: true,
       data: images,

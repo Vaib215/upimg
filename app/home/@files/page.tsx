@@ -8,7 +8,7 @@ import { toast } from "sonner";
 export default async function FilesPage() {
   const session = await getSession();
   if (!session) return redirect("/api/auth/login");
-  const { data, error } = await getImages(session?.user?.email ?? "anonymous");
+  const { data, error } = await getImages(session?.user?.email);
   if(error) {
     toast.error("Error fetching images");
   }
@@ -18,7 +18,7 @@ export default async function FilesPage() {
         Your uploads
       </h2>
       <LayoutGrid
-        cards={data?.items.map((image) => ({
+        cards={data?.map((image) => ({
           id: image.id,
           name: image.asset,
           className: "col-span-1 aspect-square",
