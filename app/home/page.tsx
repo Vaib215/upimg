@@ -1,19 +1,17 @@
 import ProfileServer from "@/components/user-profile";
 import { getSession } from "@auth0/nextjs-auth0";
-import { redirect } from 'next/navigation'
+import { redirect } from "next/navigation";
 
 export default async function Page() {
   const session = await getSession();
 
   if (!session?.user) {
-    redirect('/auth/login')
+    redirect("/auth/login");
   }
-  
+
   return (
-    <main>
-      <nav>
-        <ProfileServer />
-      </nav>
-    </main>
+    <nav>
+      <ProfileServer />
+    </nav>
   );
 }

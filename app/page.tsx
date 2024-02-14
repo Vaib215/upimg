@@ -178,7 +178,7 @@ export default function Home() {
               &copy; 2024 upimg. All rights reserved. Made with ❤️ by Vaib215
             </p>
           </div>
-          <Link className="hover:underline" href={"/"}>
+          <Link className="hover:underline" href={"https://github.com/vaib215/upimg"} target="_blank">
             <Github className="inline w-6 h-6" />
             {" / "} upimg
           </Link>
