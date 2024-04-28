@@ -11,7 +11,7 @@ export default async function FilesPage() {
 
   if(error) {
     return <div className="flex-1 flex h-full items-center">
-      Failed to fetch images. There's some issue with the server. Please try again later.
+      Failed to fetch images. There&apos;s some issue with the server. Please try again later.
     </div>
   }
   return (
