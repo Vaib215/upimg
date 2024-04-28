@@ -63,7 +63,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] | undefined }) => {
                   <section className="flex items-start gap-2">
                     <DeleteImageBtn id={card.id} setSelected={setSelected} />
                     <Button onClick={()=>{
-                      navigator.clipboard.writeText(card.thumbnail);
+                      navigator.clipboard.writeText(window.location.origin + card.thumbnail);
                       toast.success("URL copied to clipboard");
                     }} variant={"outline"} size={"sm"}>
                       <Link size={16} className="mr-2" />
